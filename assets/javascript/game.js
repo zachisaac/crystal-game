@@ -67,21 +67,23 @@ $(document).ready(function () {
         diamond = Math.floor(Math.random() * 12) + 1;
         peridot = Math.floor(Math.random() * 12) + 1;
         ruby = Math.floor(Math.random() * 12) + 1;
-        win = 0;
+        actualNumber = 0;
         $(".randomNumber").text(randomNumber);
+        $(".actualScore").text(actualNumber);
     }
 
     //Scoring Functions
     function winner() {
         alert("YOU WIN!!!");
         wins++;
-        $(".win").text(wins);
+        $(".win").text("Wins:" + " " + wins);
         reset();
     }
     function loser () {
         alert("You Lost");
         losses++;
-        $(".lose").text(losses);
+        $(".lose").text("Losses:" + " " +losses);
+        reset();
     }
     //Crystal Click Functions
     $(".diamond").on('click', function () {
@@ -100,18 +102,36 @@ $(document).ready(function () {
         actualNumber = actualNumber + sapphire;
         console.log("New actualNumber = " + actualNumber);
         $('.actualScore').text(actualNumber);
+        if (actualNumber === randomNumber){
+            winner();
+        }
+        else if (actualNumber > randomNumber) {
+            loser();
+        }
     })
 
     $(".peridot").on('click', function () {
         actualNumber = actualNumber + peridot;
         console.log("New actualNumber = " + actualNumber);
         $('.actualScore').text(actualNumber);
+        if (actualNumber === randomNumber){
+            winner();
+        }
+        else if (actualNumber > randomNumber) {
+            loser();
+        }
     })
 
     $(".ruby").on('click', function () {
         actualNumber = actualNumber + ruby;
         console.log("New actualNumber = " + actualNumber);
         $('.actualScore').text(actualNumber);
+        if (actualNumber === randomNumber){
+            winner();
+        }
+        else if (actualNumber > randomNumber) {
+            loser();
+        }
     })
 
 });
