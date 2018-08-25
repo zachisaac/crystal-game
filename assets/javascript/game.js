@@ -7,17 +7,95 @@ var randomNumber = Math.floor((Math.random() * 120) + 19);
 console.log(randomNumber);
 
 //Gems worth random number between 1 and 12
-//Actual Number Variable
-var actualNumber = Math.floor((Math.random() * 12) + 1);
-console.log(actualNumber);
+
+//Diamond
+var diamond = Math.floor(Math.random() * 12) + 1;
+console.log(diamond);
+
+//Sapphire
+var sapphire = Math.floor(Math.random() * 12) + 1;
+console.log(sapphire);
+
+//Peridot
+var peridot = Math.floor(Math.random() * 12) + 1;
+console.log(peridot);
+
+//Ruby
+var ruby = Math.floor(Math.random() * 12) + 1;
+console.log(ruby)
 
 //Wins Variable
-var win;
+var wins = 0;
 
 //Losses Variable
-var lose;
+var losses = 0;
+
+//Actual Number Variable
+var actualNumber = 0;
+console.log(actualNumber);
 
 //Gems worth random number between 1 and 12
 //Wins
 //Losses
 //Your total score at the moment
+
+$(document).ready(function () {
+    //Document Ready
+    console.log("ready!");
+    //Generate Random Number
+    var randomNumber = Math.floor((Math.random() * 120) + 19);
+
+    //Display Random Number
+    $(".randomNumber").text(randomNumber);
+
+    //Generate Random Number for each Crystal
+    var diamond = Math.floor(Math.random() * 12) + 1;
+    var sapphire = Math.floor(Math.random() * 12) + 1;
+    var peridot = Math.floor(Math.random() * 12) + 1;
+    var ruby = Math.floor(Math.random() * 12) + 1;
+    //Console Log
+    console.log(diamond, sapphire, peridot, ruby);
+
+    //Wins and Losses Tracker
+    var wins = 0;
+    var losses = 0;
+    var actualNumber = 0;
+
+    //Crystal Click Functions
+    $(".diamond").on('click', function () {
+        actualNumber = actualNumber + diamond;
+        console.log("New actualNumber = " + actualNumber);
+        $('.actualScore').text(actualNumber);
+    })
+
+    $(".sapphire").on('click', function () {
+        actualNumber = actualNumber + sapphire;
+        console.log("New actualNumber = " + actualNumber);
+        $('.actualScore').text(actualNumber);
+    })
+
+    $(".peridot").on('click', function () {
+        actualNumber = actualNumber + peridot;
+        console.log("New actualNumber = " + actualNumber);
+        $('.actualScore').text(actualNumber);
+    })
+
+    $(".ruby").on('click', function () {
+        actualNumber = actualNumber + ruby;
+        console.log("New actualNumber = " + actualNumber);
+        $('.actualScore').text(actualNumber);
+    })
+
+    //Reset Function
+    function reset () {
+        randomNumber = Math.floor((Math.random() * 120) + 19);
+        diamond = Math.floor(Math.random() * 12) + 1;
+        peridot = Math.floor(Math.random() * 12) + 1;
+        ruby = Math.floor(Math.random() * 12) + 1;
+        win = 0;
+        $(".randomNumber").text(randomNumber);
+    }
+
+    //Scoring Functions
+    
+});
