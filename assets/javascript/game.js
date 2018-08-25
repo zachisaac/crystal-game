@@ -61,11 +61,39 @@ $(document).ready(function () {
     var losses = 0;
     var actualNumber = 0;
 
+    //Reset Function
+    function reset() {
+        randomNumber = Math.floor((Math.random() * 120) + 19);
+        diamond = Math.floor(Math.random() * 12) + 1;
+        peridot = Math.floor(Math.random() * 12) + 1;
+        ruby = Math.floor(Math.random() * 12) + 1;
+        win = 0;
+        $(".randomNumber").text(randomNumber);
+    }
+
+    //Scoring Functions
+    function winner() {
+        alert("YOU WIN!!!");
+        wins++;
+        $(".win").text(wins);
+        reset();
+    }
+    function loser () {
+        alert("You Lost");
+        losses++;
+        $(".lose").text(losses);
+    }
     //Crystal Click Functions
     $(".diamond").on('click', function () {
         actualNumber = actualNumber + diamond;
         console.log("New actualNumber = " + actualNumber);
         $('.actualScore').text(actualNumber);
+        if (actualNumber === randomNumber){
+            winner();
+        }
+        else if (actualNumber > randomNumber) {
+            loser();
+        }
     })
 
     $(".sapphire").on('click', function () {
@@ -86,16 +114,4 @@ $(document).ready(function () {
         $('.actualScore').text(actualNumber);
     })
 
-    //Reset Function
-    function reset () {
-        randomNumber = Math.floor((Math.random() * 120) + 19);
-        diamond = Math.floor(Math.random() * 12) + 1;
-        peridot = Math.floor(Math.random() * 12) + 1;
-        ruby = Math.floor(Math.random() * 12) + 1;
-        win = 0;
-        $(".randomNumber").text(randomNumber);
-    }
-
-    //Scoring Functions
-    
 });
