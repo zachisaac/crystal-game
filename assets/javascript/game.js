@@ -46,7 +46,7 @@ $(document).ready(function () {
     var randomNumber = Math.floor((Math.random() * 120) + 19);
 
     //Display Random Number
-    $(".randomNumber").text(randomNumber);
+    $(".randomNumber").text("Match this number:" + " " + randomNumber);
 
     //Generate Random Number for each Crystal
     var diamond = Math.floor(Math.random() * 12) + 1;
