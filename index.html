@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Game</title>
+    <!--Font Link-->
+    <link href="https://fonts.googleapis.com/css?family=Kosugi+Maru" rel="stylesheet">
     <!--Reset CSS-->
     <link rel="stylesheet" href="assets/css/reset.css">
     <!--BootStrap CDN-->
@@ -54,26 +56,34 @@
         <!--Crystal Image Buttons-->
         <div class="row">
             <div class="col-md-12">
-                <ul>
-                    <li><input class="diamond" type="image" src="assets/images/diamond.jpg"></li>
-                    <li><input class="sapphire" type="image" src="assets/images/sapphire.jpg"></li>
-                    <li><input class="peridot" type="image" src="assets/images/peridot.jpg"></li>
-                    <li><input class="ruby" type="image" src="assets/images/ruby.jpg"></li>
+                <ul id="ordered">
+                    <li>
+                        <input class="diamond" type="image" src="assets/images/diamond.jpg">
+                    </li>
+                    <li>
+                        <input class="sapphire" type="image" src="assets/images/sapphire.jpg">
+                    </li>
+                    <li>
+                        <input class="peridot" type="image" src="assets/images/peridot.jpg">
+                    </li>
+                    <li>
+                        <input class="ruby" type="image" src="assets/images/ruby.jpg">
+                    </li>
                 </ul>
             </div>
         </div>
         <!--Scoring Section-->
         <div class="row">
-            <div class="col-md-6">Your total score is:</div>
+            <div class="col-md-6 total">Your total score is:</div>
             <!--Actual Score-->
             <div class="col-md-6 actualScore"></div>
         </div>
 
     </div>
-<!--jQuery CDN-->    
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
-<!--Javascript Link-->
-<script src="assets/javascript/game.js"></script>
+    <!--jQuery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--Javascript Link-->
+    <script src="assets/javascript/game.js"></script>
 </body>
 
 </html>

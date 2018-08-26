@@ -1,0 +1,53 @@
+body {
+    background-image: url(../images/connectwork.png)
+}
+
+h1 {
+    color: yellowgreen;
+    font-family: 'Kosugi Maru', sans-serif;
+    padding-top: 25px;
+}
+
+h6 {
+    color: yellowgreen;
+    font-family: 'Kosugi Maru', sans-serif; 
+    padding-bottom: 30px; 
+}
+
+.randomNumber {
+    color: yellowgreen;
+    font-family: 'Kosugi Maru', sans-serif;
+    padding-bottom: 30px;
+    font-size: 20px;
+}
+
+.win {
+    color: yellowgreen;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 20px;
+}
+
+.lose {
+    color: yellowgreen;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 20px;
+}
+
+#ordered {
+    list-style: none;
+    display: inline-flex;
+}
+
+.total {
+    color: yellowgreen;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 20px;
+    padding-top: 25px;
+}
+
+.actualScore {
+    color: yellowgreen;
+    font-family: 'Kosugi Maru', sans-serif;
+    font-size: 20px;
+    padding-top: 25px;
+}
